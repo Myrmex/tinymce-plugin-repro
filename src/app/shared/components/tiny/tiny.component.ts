@@ -68,7 +68,7 @@ export class TinyComponent implements AfterViewInit, OnDestroy {
       schema: 'html5',
       // https://www.tinymce.com/docs/configure/content-formatting/#style_formats
       style_formats: styleFormats,
-      toolbar: 'bold italic underline | undo redo',
+      toolbar: 'bold italic underline | undo redo | fullscreen',
       skin_url: 'assets/skins/lightgray',
       setup: editor => {
         that._editor = editor;
