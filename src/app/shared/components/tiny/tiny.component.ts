@@ -51,13 +51,16 @@ export class TinyComponent implements AfterViewInit, OnDestroy {
 
     const that = this;
 
+    // tinymce.PluginManager.load('formatDisplay', '/assets/plugins/format-display/plugin.js');
+    // let x = tinymce.PluginManager.get('formatDisplay');
+
     // initialize TinyMCE
     tinymce.init({
       selector: '#' + this.elementId,
-      plugins: ['fullscreen'],
-      external_plugins: {
-        'format-display': '/assets/plugins/format-display/plugin.js'
-      },
+      plugins: ['fullscreen', 'formatDisplay'],
+      // external_plugins: {
+      //   'format-display': '/assets/plugins/format-display/plugin.js'
+      // },
       // pass colors-to-hilites mapping to the plugin
       vsm_color_map: colorMap,
       menu: {
